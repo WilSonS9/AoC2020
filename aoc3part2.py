@@ -1,4 +1,3 @@
-f = open('./c.csv').read()
 f = open('./c.csv').read().split('\n')
 row = 1
 col = 3
