@@ -30,8 +30,6 @@ while i < len(e):
                 n += 1
         if len(nList) <= len(e) and changeCount <= 0:
             changeCount += 1
-            print(nList)
-            print(acc2)
             print('Changed row', i+1, 'to nop')
             iList.pop()
         else:
@@ -52,9 +50,7 @@ while i < len(e):
             elif e[j][0] == 'nop':
                 j += 1
         if len(jList) <= len(e) and changeCount <= 0:
-            print(jList)
             changeCount += 1
-            print(acc3)
             print('Changed row', i+1, 'to jmp')
             iList.pop()
         else:
