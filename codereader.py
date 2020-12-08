@@ -17,5 +17,5 @@ class imboi:
         if self.i in self.iList:
             self.looped = True
         self.iList.append(self.i)
-        if self.i == len(self.inp):
+        if self.i >= len(self.inp):
             self.fin = True
