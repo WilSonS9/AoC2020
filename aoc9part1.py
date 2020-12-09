@@ -13,3 +13,4 @@ def func():
                     del preamble[0]
                 elif c == 24 and d == 24 and not summed:
                     return f[b]
+print(func())
