@@ -1,5 +1,3 @@
-from copy import deepcopy
-
 f = open('./v.csv').read().split('\n')
 
 e = []
