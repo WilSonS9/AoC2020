@@ -1,8 +1,8 @@
-from collections import defaultdict, deque
+from collections import deque
 
 def do():
     e = deque([8,7,2,4,9,5,1,3,6] + list(range(10, 1000001)))
-    comesAfter = defaultdict(list)
+    comesAfter = {}
 
     def getNext():
         nextElt = e.popleft()
@@ -21,7 +21,7 @@ def do():
             destination -= 1
             if destination < 1:
                 destination = 1000000
-        comesAfter[destination] += pickCups
+        comesAfter[destination] = pickCups
         e.append(curCup)
         c2 += 1
 
