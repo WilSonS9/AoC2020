@@ -50,24 +50,10 @@ def expand(dictionary):
                 new[abc] = {'black': False}
             else:
                 new[abc] = dictionary[abc]
-        # for x1 in range(-2, 3):
-        #     for y1 in range(-1, 2):
-        #         x3 = x1 + int(name[1])
-        #         y3 = 2*y1 + int(name[0])
-        #         t = ' '.join([str(y3), str(x3)])
-        #         if not t in dictionary:
-        #             new[t] = {'black': False}
-        #         else:
-        #             new[t] = dictionary[t]
     return new
 
 def simulateDay(dic):
-    # print(dic)
-    # print()
     dic = expand(dic).copy()
-    # print(dic)
-    # print()
-    # print()
     newD = {}
     for tile in dic:
         newT = {}
@@ -81,16 +67,6 @@ def simulateDay(dic):
                 if t in dic:
                     if dic[t]['black'] == True:
                         c2 += 1
-        # for x1 in range(-2, 3):
-        #     for y1 in range(-1, 2):
-        #         name = tile.split(' ')
-        #         x3 = x1 + int(name[1])
-        #         y3 = 2*y1 + int(name[0])
-        #         ts = ' '.join([str(y3), str(x3)])
-        #         if not ts == tile:
-        #             if ts in dic:
-        #                 if dic[ts]['black'] == True:
-        #                     c2 += 1
         if dic[tile]['black'] == True:
             if c2 == 0 or c2 > 2:
                 newT['black'] = False
@@ -104,9 +80,9 @@ def simulateDay(dic):
         newD[tile] = newT
     return newD
 
-i = 0
+i = 1
 old = tiles.copy()
-while i < 100:
+while i < 101:
     old = simulateDay(old).copy()
     c3 = 0
     for hh in old:
@@ -114,5 +90,5 @@ while i < 100:
             c3 += 1
     print(i)
     i += 1
-    if i == 100:
+    if i == 101:
         print(c3)
